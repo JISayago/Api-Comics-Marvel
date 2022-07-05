@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+div .navbar{
+    height: 10vh;
+}
+div .navbot{
+    display: flex;
+    justify-content:space-around;
+    font-family: 'Comic Neue', cursive;
+    font-size: 25px;
+    padding: 15px;
+    background-color: var(--black);
+}
+div .navbot a {
+    text-decoration: none;
+    color:var(--white);
+    transition: font-size 0.3s ease-in-out;
+}
+div .navbot a:hover {
+    color: var(--red);
+    font-size: 30px;
+}
+div .navtop {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+}
+div form {
+    width: 220px;
+    padding:5px;
+display: flex;
+justify-content: space-between;
+}
+div button{
+    width: 45px;
+    padding: 2px;
+    border-radius: 5px;
+    font-family: 'Comic Neue', cursive;
+    color: var(--white);
+    background-color: var(--red);
+    border: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+div button:hover {
+    background-color: var(--white);
+    color: var(--red);
+}
+div form .search{
+ border: none;
+ padding:5px;
+ font-family: 'Comic Neue', cursive;
+ font-weight: bold;
+ background-color: transparent;
+ border-bottom: 1px solid var(--red);
+ color: var(--white);
+ }
+ div form .search::placeholder{
+    color:#f7f7f760;
+
+ }
+ div form .search:focus{
+ outline: none;
+ }
+
+ div .navtop img{
+    background-color: transparent;
+    border: 0px;
+    width: 250px;
+    height: 70px;
+    border-radius: 0%;
+}
+
+div .navtop a,label {
+    margin: 2px;
+    font-family: 'Comic Neue', cursive;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+    color: var(--white);
+}
+div .navtop a:hover {
+    color: var(--red);
+    font-size: 17px;
+}
+

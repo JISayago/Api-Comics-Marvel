@@ -1,0 +1,81 @@
+:root{
+--red:#ec1d24;
+--black:#202020;
+--white:#f7f7f7;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.comics {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--black);
+}
+
+.comic{
+    width:200px;
+    height: 55vh;
+    margin: 15px;
+    padding: 5px;
+    border: 2px solid var(--red);
+    border-radius: 10%;
+    background-color:  #f7f7f799;
+    transition: background-color,width,height;
+}
+.comic:hover{
+    background-color:var(--white);
+width: 300px;
+height: 70vh;
+}
+
+img{
+    border-radius: 20%;
+    border: 1px solid var(--white);
+}
+h3 {
+    margin-top: 15px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 17px;
+    color: var(--black);
+}
+
+.modal_comic{
+    position: fixed;    
+    width: 80%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: var(--white);
+    visibility: hidden;
+}
+.modal_comic_visible{
+   
+    visibility: visible;
+}
+.content_modal_comic{
+    position: absolute;
+    display: flex;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    
+    width: 75%;
+    height:80vh ;
+    background-color: #ec1d24;
+}
+
+.modal_comic img{
+    width: 500px;
+    height: 70vh;
+}
