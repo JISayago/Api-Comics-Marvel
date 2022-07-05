@@ -11,7 +11,7 @@ function Comic({ comic }) {
   const handleClick = (cId) => {
     setTheComic(comic);
     let modal = document.getElementsByClassName("modal_comic");
-    modal[0].style.visibility = "visible"
+    modal[0].style.visibility = "visible";
     }
   return (
     <button onClick={ () =>handleClick(comic.id) } className='comic'>      
