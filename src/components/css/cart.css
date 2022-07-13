@@ -9,6 +9,7 @@
     float: right;
     
   }
+
   .cart-slide{
     position: fixed;
     right:0;
@@ -29,6 +30,8 @@
   .cart-slide:hover .btn-comprar{
     background-color: var(--red);
     color: var(--white);
+   
+
   }
 
 .item-list{
@@ -36,11 +39,12 @@
 }  
 
 .cart_item{
-  padding: 8px;
+  padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #20202095;
+    border-radius: 5px;
+    background-color: #202020;
     margin-top: 5px;
     
 }
@@ -55,17 +59,20 @@
 
 .cart_item label{
     color: var(--red);
-    font-weight: bold;
+    font-weight: bolder;
 }
 .cart_img_item{
     width: 50px;
     height: 50px;
     border: 0;   
+    
 }
 .btn-comprar{
   background-color: transparent;
   color: transparent;
-  width: 50%;
+  width: 75%;
   margin-top:5px;
   padding: 7px;
+  margin-left: 50%;
+  transform: translate(-50%);
 }

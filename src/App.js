@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { CartContextProvider } from './context/CartContext';
 import './App.css';
 import md5 from 'md5';
 import Comics from './components/Comics';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
+
 
 function App() {
 
@@ -22,13 +24,17 @@ function App() {
  }, [])
  
   return (
-    <>
-        <Navbar/>
-    <div className="App">
+    <CartContextProvider>
+      <div className="App">
+        
+             <Navbar/>
+             <div className='content'>
         {<Comics comics={comics} />}
-        <Cart/>
-    </div>
-    </>
+          <Cart />
+          </div>
+        </div>
+        
+      </CartContextProvider>
   );
 }
 
