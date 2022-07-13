@@ -1,11 +1,13 @@
 import React from 'react'
 import "./css/cart.css";
 
-function CartItem() {
+function CartItem({ comic }) {
+  let pathImg = `${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`;
+  let price = comic.prices[0].price;
   return (
     <div className='cart_item'>
-           <img className='cart_img_item' src="../../img/lupa.png" alt="img-comic"/>
-      <h3>titulo del comic comprado </h3><label>$6565</label>
+           <img className='cart_img_item' src={pathImg} alt="img-comic"/>
+      <h3>{comic.title}</h3><label>${price}</label>
       <button>X</button>
     </div>
   )

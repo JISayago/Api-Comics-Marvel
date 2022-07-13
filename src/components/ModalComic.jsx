@@ -5,25 +5,28 @@ import CartContext from "../context/CartContext";
 
 function ModalComic() {
     const { theComic } = useContext(ComicContext);
-    const { setTheCart } = useContext(CartContext);
+    const { theCart, setTheCart } = useContext(CartContext);
     let pathImg = "../../img/example.png";
+    let price = "0";
 
     if (theComic.length !== 0) {
         pathImg = `${theComic.thumbnail.path}/portrait_incredible.${theComic.thumbnail.extension}`
+        price = theComic.prices[0].price;
     }
 
-
-console.log("q llega:",theComic)
     const handleClick = (comic) => {
-        setTheCart(comic)
+        setTheCart([...theCart, comic]);
     }
+    
     const handleCloseClick = () => {
+        modal_close();
+        document.getElementsByTagName('body')[0].style.overflow = 'auto';        
+        document.getElementsByClassName('comic')[0].disabled = false; 
+    }
+
+    const modal_close = () => {
         let modal = document.getElementsByClassName("modal_comic")[0];
         modal.classList.remove("modal_comic_active");
-        document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        
-        document.getElementsByClassName('comic')[0].disabled = false; 
-       
     }
     return (
         <div className='modal_comic'>
@@ -33,7 +36,7 @@ console.log("q llega:",theComic)
           <div className='comic-modal-text'>
                     <h1>{theComic.title}</h1>
                     <p>{theComic.description}</p>
-                    <h3>${ theComic.price}</h3>              
+                    <h3>${price}</h3>              
                 </div>
                 
             </div>

@@ -20,6 +20,7 @@
     border:1px solid var(--white);
     background-color: #f7f7f799;
     transition: width 0.5s ease-out;
+    overflow: auto;
   }
   
   .cart-slide:hover{

@@ -5,18 +5,15 @@ import CartContext from "../context/CartContext";
 
 function Cart() {
   const { theCart } = useContext(CartContext);
-  console.log("En Carro:",theCart);
   
  /*agregar cantidad de productos, lo pensé como numerito sobre imagen*/ 
+ 
   return (
     <div className='cart'>
           <div className='cart-slide'>
               <img className='cart-img' src='../../img/carro.png' alt='img-comic'></img>
-              <div className='item-list'>
-                <CartItem />          
-                <CartItem />
-                <CartItem />
-                <CartItem />
+        <div className='item-list'>
+        {theCart.map(c => <CartItem id={c.id} comic={c} />)}
              </div>
               <button className='btn-comprar'>Comprar</button>
           </div>  
