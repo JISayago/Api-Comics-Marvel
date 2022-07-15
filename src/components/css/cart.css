@@ -1,53 +1,87 @@
 .cart{
-    width: 230px;  
+    width: 75px;  
     background-color: var(--black);
+  }
+  .cart_top{
+    display: flex;
+    background-color: #f7f7f7;
+    padding: 5px;
+    border-radius: 15px 0 0 15px;
+
   }
   .cart-img{
     width: 20px;
     height: 20px;
     border: 0;
-    float: right;
-    
+    margin: 0 auto;    
+  }
+  .cart_total{
+    visibility: collapse;
   }
 
   .cart-slide{
     position: fixed;
     right:0;
-    padding: 5px;
-    width: 56px;
-    height: 80vh;
-    border-radius: 15px 0 0 0;
-    border:1px solid var(--white);
-    background-color: #f7f7f799;
-    transition: width 0.5s ease-out;
-    overflow: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px 0 0 15px;
+    border:3px solid var(--white);
+    background-color: var(--white);
+    transition: height 1s,width 1s;
   }
   
   .cart-slide:hover{
     width:500px;
+    height: 80vh;
     background-color: #f7f7f799;
+    position: fixed;
+    right:0;   
+    border-radius: 15px 0 0 0;
+    border:1px solid var(--white);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .cart-slide:hover .cart_top{
+    display: flex;
+    background-color: #f7f7f7;
+    border: 1px solid var(--white);
+    width: 98%;
+    border-radius: 5px 0 0 0;
+  }
+
+  .cart-slide:hover .cart_total{
+    visibility: visible;
+    color: var(--black);
+    text-align: center;
+    width: 100%;
+    font-weight: 900;
+    
   }
 
   .cart-slide:hover .btn-comprar{
     background-color: var(--red);
     color: var(--white);
-   
-
   }
-
 .item-list{
     margin-top: 30px;
 }  
 
 .cart_item{
-  padding: 5px;
-    display: flex;
+    padding: 5px;
+    display: none;
     justify-content: space-between;
+    height: 10vh;
     align-items: center;
     border-radius: 5px;
     background-color: #202020;
     margin-top: 5px;
     
+}
+
+.cart-slide:hover .cart_item{
+  display: flex;
+  justify-content: space-between;
 }
 .cart_item h3{
     color: transparent;
@@ -68,6 +102,15 @@
     border: 0;   
     
 }
+
+.cart_item_text{
+  font-size: 11px;
+}
+.cart_item_left{
+  display: flex;
+  justify-content: end;
+}
+
 .btn-comprar{
   background-color: transparent;
   color: transparent;

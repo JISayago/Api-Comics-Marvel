@@ -5,6 +5,7 @@ import md5 from 'md5';
 import Comics from './components/Comics';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
+import { TotalPriceContextProvider } from './context/TotalPriceContext';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
  
   return (
     <CartContextProvider>
+       <TotalPriceContextProvider>
       <div className="App">
         
              <Navbar/>
@@ -33,7 +35,7 @@ function App() {
           <Cart />
           </div>
         </div>
-        
+        </TotalPriceContextProvider>
       </CartContextProvider>
   );
 }
