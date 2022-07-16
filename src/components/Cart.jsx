@@ -8,6 +8,7 @@ function Cart() {
   const { theCart } = useContext(CartContext);
   const { total, setTotal } = useContext(TotalPriceContext);
   let cantItems = theCart.length;
+  
 
    return (
     <div className='cart'>
@@ -15,7 +16,7 @@ function Cart() {
         <div className='cart_top'>
           <label className='cart_total'>Total:${total}</label>
           <div className='cart_img_pop'>
-            <div className='cart_pop'><small>{cantItems}</small></div>
+            <div className={cantItems <= 0 ? "cart_no_pop" : 'cart_pop'}><small>{cantItems}</small></div>
           <img className='cart-img' src='../../img/carro.png' alt='img-comic'></img>
           </div>
           </div>
