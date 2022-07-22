@@ -6,6 +6,7 @@ import Comics from './components/Comics';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import { TotalPriceContextProvider } from './context/TotalPriceContext';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -26,14 +27,14 @@ function App() {
  
   return (
     <CartContextProvider>
-       <TotalPriceContextProvider>
-      <div className="App">
-        
+      <TotalPriceContextProvider>
+        <div className="App">
              <Navbar/>
              <div className='content'>
         {<Comics comics={comics} />}
           <Cart />
           </div>
+          <Footer/>
         </div>
         </TotalPriceContextProvider>
       </CartContextProvider>

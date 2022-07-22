@@ -14,11 +14,11 @@ function Cart() {
     <div className='cart'>
       <div className='cart-slide'>
         <div className='cart_top'>
-          <label className='cart_total'>Total:${total}</label>
-          <div className='cart_img_pop'>
+           <div className='cart_img_pop'>
+           <img className='cart-img' src='../../img/carro.png' alt='img-comic'></img>
             <div className={cantItems <= 0 ? "cart_no_pop" : 'cart_pop'}><small>{cantItems}</small></div>
-          <img className='cart-img' src='../../img/carro.png' alt='img-comic'></img>
-          </div>
+           </div>
+           <label className='cart_total'>Total:${total}</label>
           </div>
           <div className='item-list'>
           {theCart.map(c => {             

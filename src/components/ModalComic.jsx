@@ -11,15 +11,20 @@ function ModalComic() {
 
     let pathImg = "../../img/example.png";
     let price = "0";
+    let description = "Without description to show."
 
     if (theComic.length !== 0) {
-        pathImg = `${theComic.thumbnail.path}/portrait_incredible.${theComic.thumbnail.extension}`
-        price = theComic.prices[0].price;
+        pathImg = `${theComic.thumbnail.path}/portrait_incredible.${theComic.thumbnail.extension}`;
+        theComic.prices[0].price === 0 ? price = 0.10 : price = theComic.prices[0].price;
+    }
+
+    if (theComic.description !== "") {
+        description = theComic.description;
     }
 
     const handleClick = (comic) => {
         setTheCart([...theCart, comic]);
-        setTotal(total + comic.prices[0].price);
+        setTotal(total + price);
         handleCloseClick();
     }
     
@@ -38,13 +43,12 @@ function ModalComic() {
         <div className='modal_comic'>
             <button onClick={handleCloseClick} className='x'>X</button>
           <div className='content_modal_comic'>
-                <img src={pathImg } alt="img-comic-modal"></img>
+                <img src={pathImg} alt="img-comic-modal"></img>
           <div className='comic-modal-text'>
                     <h1>{theComic.title}</h1>
-                    <p>{theComic.description}</p>
+                    <p>{description}</p>
                     <h3><strong>${price}</strong></h3>              
                 </div>
-                
             </div>
             <button onClick={() => handleClick(theComic)} className='agregar_carrito'>Agregar</button>
       </div>

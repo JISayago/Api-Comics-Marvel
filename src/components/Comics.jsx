@@ -20,9 +20,15 @@ function Comics({comics}) {
 
     return (
         <ComicContextProvider>
-        <div className='comics'>
-            {comicList.map(c => <Comic id={c.id} comic={c} />)}
-            <ModalComic/>
+            <div className='comics'>
+                {
+                    comicList.length > 0 
+                        ?
+                        comicList.map(c => <Comic id={c.id} comic={c} /> )
+                        :
+                        <h1 className='comic_mensaje'>No Comics Found!</h1>
+                }
+                    <ModalComic />
             </div>
             </ComicContextProvider>
   )

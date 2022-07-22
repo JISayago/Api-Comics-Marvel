@@ -4,7 +4,8 @@ import CartContext from "../context/CartContext";
 
 function CartItem({ comic, setTotal,total}) {
   let pathImg = `${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`;
-  let price = comic.prices[0].price;
+  let price;
+  comic.prices[0].price === 0 ? price = 0.10 : price = comic.prices[0].price;
 
   const { theCart, setTheCart } = useContext(CartContext);
 

@@ -2,7 +2,7 @@ import React, { useContext} from 'react';
 import "./css/comics.css";
 import ComicContext from "../context/ComicContext";
 
-function Comic({ comic }) {
+function Comic({ comic, id }) {
   const urlImg = `${comic.thumbnail.path}/portrait_xlarge.${comic.thumbnail.extension}`;
   const { setTheComic } = useContext(ComicContext);
 
@@ -20,7 +20,7 @@ function Comic({ comic }) {
     modal.classList.add("modal_comic_active");
   }
   return (
-    <button onClick={ handleClick } className='comic'>      
+    <button id={id} onClick={ handleClick } className='comic' >      
      <img src={urlImg} alt={comic.title} />
       <h3 >{comic.title}</h3>
       </button>
