@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import { CartContextProvider } from './context/CartContext';
 import './App.css';
 import md5 from 'md5';
-import Comics from './components/Comics';
 import Navbar from './components/Navbar';
-import Cart from './components/Cart';
 import { TotalPriceContextProvider } from './context/TotalPriceContext';
 import Footer from './components/Footer';
+import BodyContent from './components/BodyContent';
 
 
 function App() {
@@ -29,11 +28,8 @@ function App() {
     <CartContextProvider>
       <TotalPriceContextProvider>
         <div className="App">
-             <Navbar/>
-             <div className='content'>
-        {<Comics comics={comics} />}
-          <Cart />
-          </div>
+          <Navbar />
+          <BodyContent comics={comics} />             
           <Footer/>
         </div>
         </TotalPriceContextProvider>

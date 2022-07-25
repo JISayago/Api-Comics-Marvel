@@ -71,6 +71,10 @@ div form .search{
  div form .search:focus{
  outline: none;
  }
+ div .navtop_log_reg{
+    padding: 3px;
+    width: 12%;
+ }
 
  div .navtop img{
     background-color: transparent;
@@ -80,15 +84,27 @@ div form .search{
     border-radius: 0%;
 }
 
-div .navtop a,label {
+div .navtop .log,.reg{
+width: 40%;
+}
+
+div .navtop .log_reg{
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--white);
+    transition: color 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out;
+    
+}
+div .navtop label {
     margin: 2px;
     font-family: 'Comic Neue', cursive;
     text-decoration: none;
-    transition: font-size 0.3s ease-in-out;
+    
     color: var(--white);
 }
-div .navtop a:hover {
+div .navtop .log_reg:hover {
     color: var(--red);
-    font-size: 17px;
+    font-size: 15px;
 }
 

@@ -9,6 +9,20 @@ function NavbarTop() {
         e.preventDefault();
         setSearch(e.target.value);
     }
+    const handleClickLog = () => {
+        login_show();
+    }
+    const handleClickReg = () => {
+        register_show()
+    }
+    const login_show = () => {
+        let login = document.getElementsByClassName("login")[0];
+        login.classList.add("login_show");
+    }
+    const register_show = () => {
+        let register = document.getElementsByClassName("register")[0];
+        register.classList.add("register_show");
+      }
   return (
       <div className="navbar navtop">
           <form onChange={handleChange}>
@@ -16,10 +30,10 @@ function NavbarTop() {
               <button>search</button>
           </form>
           <img className='marvel' src='../../img/marvel.png'></img>
-              <div>
-              <a href='#'>Log-in</a>
+              <div className='navtop_log_reg'>
+              <button className='log_reg log' onClick={handleClickLog}>Log-in</button >
               <label>/</label>
-          <a href='#'>Register</a>  
+              <button className='log_reg reg' onClick={handleClickReg}>Register</button >  
               </div>
           
       </div>

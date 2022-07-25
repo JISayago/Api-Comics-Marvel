@@ -64,6 +64,9 @@ h3 {
     background-color: var(--white);    
     visibility: hidden;
     opacity: 0%;
+    border-radius: 10px;
+    background-color: #202020;
+    border:5px ridge var(--white);
     transition: opacity 0.5s linear ;
 }
 
@@ -104,11 +107,6 @@ div::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-.modal_comic {
-    border-radius: 10px;
-    background-color: #202020;
-    border:5px ridge var(--white);
-}
 .modal_comic h1{
     margin: 15px 0 50px 0;
     color: var(--black);

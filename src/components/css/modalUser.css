@@ -1,0 +1,46 @@
+.login{
+    position: fixed; 
+    padding: 10px;   
+    width: 25%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #202020;
+    border:5px ridge var(--white);    
+    visibility: hidden;
+    opacity: 0%;
+    transition: opacity 0.5s linear ;
+}
+
+.login_show{
+        visibility: visible;
+        opacity: 100%;
+}
+
+
+.register{
+    position: fixed; 
+    padding: 10px;   
+    width: 25%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #202020;
+    border:5px ridge var(--white);    
+    visibility: hidden;
+    opacity: 0%;
+    transition: opacity 0.5s linear ;
+}
+
+.register_show{
+        visibility: visible;
+        opacity: 100%;
+}

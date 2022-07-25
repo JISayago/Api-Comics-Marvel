@@ -26,7 +26,10 @@
 .datos_footer label{
     font-size: small;
     font-family: 'Comic Neue', cursive;
+    font-weight: bold;
     text-align: center;
+    margin-top: 2px;
+    color: var(--white);
 }
 
 
@@ -46,7 +49,7 @@
 .footer_bot{
     display: flex;
     padding: 5px;
-    justify-content: end;
+    justify-content:flex-end;
 }
 .footer_bot label{
     font-weight: bold;
