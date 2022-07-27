@@ -10,33 +10,24 @@ function NavbarTop() {
         setSearch(e.target.value);
     }
 
-    const handleClickFormulario = () => {
-
-    }
-
-    const handleClickLog = () => {
-        if (document.getElementsByClassName('comic')[0].disabled === false) {
-            login_show();
+    const handleClickFormulario = (accion) => {
+        if(document.getElementsByClassName('comic')[0].disabled === false){ 
+            form_show(accion);
             document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-            document.getElementsByClassName('comic')[0].disabled = true; 
-         }        
+            document.getElementsByClassName('comic')[0].disabled = true;
+        }
     }
-    const handleClickReg = () => {
-        if (document.getElementsByClassName('comic')[0].disabled === false) {
-            register_show();
-            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-            document.getElementsByClassName('comic')[0].disabled = true; 
-         }        
-    }
-    // hacer pasar tanto reg como log como una sola func pa ahorrar espacio
-    const login_show = () => {
+    
+    const form_show = (accion) => {
+        if(accion === "log"){
         let login = document.getElementsByClassName("login")[0];
-        login.classList.add("login_show");
-    }
-    const register_show = () => {
-        let register = document.getElementsByClassName("register")[0];
+            login.classList.add("login_show");
+        }
+        else {
+            let register = document.getElementsByClassName("register")[0];
         register.classList.add("register_show");
-      }
+       } 
+    }
   return (
       <div className="navbar navtop">
           <form onChange={handleChange}>
@@ -45,9 +36,9 @@ function NavbarTop() {
           </form>
           <img className='marvel' src='../../img/marvel.png'></img>
               <div className='navtop_log_reg'>
-              <button className='log_reg log' onClick={() => handleClickFormulario}>Log-in</button >
+              <button className='log_reg log' onClick={() => handleClickFormulario("log")}>Log-in</button >
               <label>/</label>
-              <button className='log_reg reg' onClick={() => handleClickFormulario}>Register</button >  
+              <button className='log_reg reg' onClick={() => handleClickFormulario("reg")}>Register</button >  
               </div>
           
       </div>

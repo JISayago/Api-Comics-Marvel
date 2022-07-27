@@ -5,7 +5,7 @@ import CartContext from "../context/CartContext";
 function CartItem({ comic, setTotal,total}) {
   let pathImg = `${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`;
   let price;
-  comic.prices[0].price === 0 ? price = 0.10 : price = comic.prices[0].price;
+  comic.prices[0].price === 0 ? price = 1 : price = comic.prices[0].price;
 
   const { theCart, setTheCart } = useContext(CartContext);
 
@@ -14,10 +14,12 @@ function CartItem({ comic, setTotal,total}) {
       items.id !== c.id
     )
     setTheCart(cart);
-    console.log(cart)
     let lastPrice = c.prices[0].price;
-    lastPrice === 0 ? lastPrice = 0.10 : lastPrice = c.prices[0].price;
+    lastPrice === 0 ?
+      lastPrice = 1 :
+      lastPrice = c.prices[0].price;
     setTotal(total - lastPrice);
+    console.log(total)
   }
 
   return (

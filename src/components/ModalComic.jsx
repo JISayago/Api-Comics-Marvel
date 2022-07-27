@@ -15,7 +15,7 @@ function ModalComic() {
 
     if (theComic.length !== 0) {
         pathImg = `${theComic.thumbnail.path}/portrait_incredible.${theComic.thumbnail.extension}`;
-        theComic.prices[0].price === 0 ? price = 0.10 : price = theComic.prices[0].price;
+        theComic.prices[0].price === 0 ? price = 1 : price = theComic.prices[0].price;
     }
 
     if (theComic.description !== "") {

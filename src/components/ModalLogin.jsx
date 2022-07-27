@@ -8,6 +8,7 @@ function ModalLogin() {
     document.getElementsByTagName('body')[0].style.overflow = 'auto';        
     document.getElementsByClassName('comic')[0].disabled = false; 
   }
+  
   const login_close = () => {
     let login = document.getElementsByClassName("login")[0];
     login.classList.remove("login_show");
@@ -22,12 +23,9 @@ function ModalLogin() {
      }        
 }
   const register_show = () => {
-   
     let register = document.getElementsByClassName("register")[0];
     register.classList.add("register_show");
   }
-
-
 
   return (
     <div className='login'>
