@@ -14,7 +14,10 @@ function CartItem({ comic, setTotal,total}) {
       items.id !== c.id
     )
     setTheCart(cart);
-    setTotal(total - c.prices[0].price);
+    console.log(cart)
+    let lastPrice = c.prices[0].price;
+    lastPrice === 0 ? lastPrice = 0.10 : lastPrice = c.prices[0].price;
+    setTotal(total - lastPrice);
   }
 
   return (

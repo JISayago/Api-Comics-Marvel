@@ -9,12 +9,26 @@ function NavbarTop() {
         e.preventDefault();
         setSearch(e.target.value);
     }
+
+    const handleClickFormulario = () => {
+
+    }
+
     const handleClickLog = () => {
-        login_show();
+        if (document.getElementsByClassName('comic')[0].disabled === false) {
+            login_show();
+            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+            document.getElementsByClassName('comic')[0].disabled = true; 
+         }        
     }
     const handleClickReg = () => {
-        register_show()
+        if (document.getElementsByClassName('comic')[0].disabled === false) {
+            register_show();
+            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+            document.getElementsByClassName('comic')[0].disabled = true; 
+         }        
     }
+    // hacer pasar tanto reg como log como una sola func pa ahorrar espacio
     const login_show = () => {
         let login = document.getElementsByClassName("login")[0];
         login.classList.add("login_show");
@@ -31,9 +45,9 @@ function NavbarTop() {
           </form>
           <img className='marvel' src='../../img/marvel.png'></img>
               <div className='navtop_log_reg'>
-              <button className='log_reg log' onClick={handleClickLog}>Log-in</button >
+              <button className='log_reg log' onClick={() => handleClickFormulario}>Log-in</button >
               <label>/</label>
-              <button className='log_reg reg' onClick={handleClickReg}>Register</button >  
+              <button className='log_reg reg' onClick={() => handleClickFormulario}>Register</button >  
               </div>
           
       </div>

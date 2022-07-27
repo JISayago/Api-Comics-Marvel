@@ -1,8 +1,9 @@
+
 .login{
     position: fixed; 
     padding: 10px;   
     width: 25%;
-    height: 50%;
+    height: 57%;
     top: 0;
     left: 0;
     right: 0;
@@ -10,10 +11,11 @@
     margin: auto;
     border-radius: 10px;
     background-color: #202020;
-    border:5px ridge var(--white);    
+    border:5px ridge #f7f7f7;    
     visibility: hidden;
     opacity: 0%;
     transition: opacity 0.5s linear ;
+    font-family: 'Comic Neue', cursive;
 }
 
 .login_show{
@@ -21,12 +23,111 @@
         opacity: 100%;
 }
 
+.title{
+    color: #f7f7f760;
+    font-family: 'Comic Neue', cursive;
+}
+.x{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    top: 2px;
+    color: var(--white);
+    background-color: transparent;
+}
+.x:hover{
+    color: var(--red);
+    background-color: transparent;
+}
 
+.form_data{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    font-family: 'Comic Neue', cursive;
+}
+.form_data .content_data{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+.form_data .content_data label{
+font-size: 17px;
+font-weight: bold;
+color:var(--white);
+
+}
+
+.form_data button{
+    width: 45px;
+    padding: 2px;
+    border-radius: 5px;
+    font-family: 'Comic Neue', cursive;
+    color: var(--white);
+    background-color: var(--red);
+    border: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+.form_data button:hover{
+    background-color: var(--white);
+    color: var(--red);
+}
+.form_data  a{
+    width: 45px;
+    padding: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--white);
+    border: 0;
+    transition: color 0.3s ease-in-out;
+}
+.form_data  a:hover{
+    color:var(--red);
+    font-weight: bold;
+}
+
+form .input_data{
+    border: none;
+    padding:5px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    background-color: transparent;
+    border-bottom: 1px solid var(--red);
+    color: var(--white);
+    }
+    form .input_data::placeholder{
+       color:#f7f7f760;
+   
+    }
+    form .input_data:focus{
+    outline: none;
+    }
+
+form .log_buttons{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+form .log_links{
+   position: absolute;
+   padding: 3px;
+   bottom: 0;
+   right: 0;
+}
+form .forgoten_pass{
+    font-size: 13px;
+        color: #f7f7f760;
+        
+}
 .register{
     position: fixed; 
     padding: 10px;   
     width: 25%;
-    height: 50%;
+    height: 70%;
     top: 0;
     left: 0;
     right: 0;
@@ -43,4 +144,8 @@
 .register_show{
         visibility: visible;
         opacity: 100%;
+}
+
+.register .register_button{
+    width: 40%;
 }
