@@ -27,8 +27,10 @@ function CartItem({ comic, setTotal,total}) {
       <img className='cart_img_item' src={pathImg} alt="img-comic" />
       <h3 className='cart_item_text'>{comic.title}</h3>
       
-    <div className='cart_item_left'>
-    <label className='cart_item_price'>${price}</label>
+      <div className='cart_item_left'>
+        <div className='cart_item_price'>
+          <label className='cart_item_price_label'>${price}</label>
+          </div>
       <button onClick={()=> handleClick(comic)}>X</button>
       </div>
       </div>
